@@ -1,0 +1,5 @@
+#Sun Apr 10 18:23:03 BRT 2011
+eclipse.preferences.version=1
+jarsExcludedFromWebInfLib=/Users/jbernab/work/dojo/game/lib/easymock-3.0.jar
+warSrcDir=war
+warSrcDirIsOutput=true
