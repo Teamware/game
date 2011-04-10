@@ -4,9 +4,6 @@ import game.client.domain.World;
 import game.client.views.WorldViewImpl;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.GWT;
-import com.google.gwt.dev.GWTMain;
-import com.google.gwt.thirdparty.guava.common.annotations.GwtCompatible;
 import com.google.gwt.user.client.Timer;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.RootPanel;
