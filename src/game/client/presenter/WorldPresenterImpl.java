@@ -6,14 +6,11 @@ import game.client.domain.World;
 import game.client.domain.WorldObject;
 import game.client.domain.listeners.WorldListener;
 
-import java.util.Random;
-
 
 public class WorldPresenterImpl implements WorldPresenter {
 
 	private final WorldView view;
 	private final World world;
-	private Random random = new Random();
 
 	public WorldPresenterImpl(WorldView view, World world) {
 		this.view = view;
@@ -76,11 +73,11 @@ public class WorldPresenterImpl implements WorldPresenter {
 	 */
 	@Override
 	public void createNewRobot() {
-		world.add(new Robot(randInt(1280), randInt(800)));
+		world.add(new Robot(randInt(900), randInt(600)));
 	}
 
 	private int randInt(int i) {
-		return (int)(i*random.nextDouble());
+		return (int)(i*Math.random());
 	}
 
 	/* (non-Javadoc)
@@ -88,7 +85,7 @@ public class WorldPresenterImpl implements WorldPresenter {
 	 */
 	@Override
 	public void createNewLigthHouse() {
-		world.add(new LigthHouse(randInt(1280), randInt(800)));
+		world.add(new LigthHouse(randInt(900), randInt(600)));
 	}
 
 }

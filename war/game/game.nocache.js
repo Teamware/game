@@ -285,11 +285,11 @@ function game(){
   $stats && $stats({moduleName:'game', sessionId:$sessionId_0, subSystem:'startup', evtGroup:'bootstrap', millis:(new Date).getTime(), type:'selectingPermutation'});
   if (!isHostedMode()) {
     try {
-      unflattenKeylistIntoAnswers(['ie8'], '080D3B18F06B41DBBD3BFD94AAD56B87');
-      unflattenKeylistIntoAnswers(['safari'], '2BF7A97976DAEAB39E90843E079E728A');
-      unflattenKeylistIntoAnswers(['gecko1_8'], '342D913D45927722207A6E441588960E');
-      unflattenKeylistIntoAnswers(['opera'], '94A0764534A10E3370132BA9A67ED2D0');
-      unflattenKeylistIntoAnswers(['ie6'], 'FCB50691A4CD19DEB1C9246D31128C44');
+      unflattenKeylistIntoAnswers(['opera'], '06B7CF912804FB3FDA4482A8EB19E9FE');
+      unflattenKeylistIntoAnswers(['ie6'], '091957F5BB0B517851C485C92B306158');
+      unflattenKeylistIntoAnswers(['gecko1_8'], '1F62B13C952714D6401872C73396198A');
+      unflattenKeylistIntoAnswers(['safari'], '3BBF756A59C74781B7A6F298E5E83B94');
+      unflattenKeylistIntoAnswers(['ie8'], '8290617F13510AD0B292DA4BD9C00FFC');
       strongName = answers[computePropValue('user.agent')];
       var idx = strongName.indexOf(':');
       if (idx != -1) {

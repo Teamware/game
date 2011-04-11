@@ -1,22 +1,31 @@
 package game.client.domain;
 
 import game.client.domain.listeners.ChangeListener;
+import game.client.domain.listeners.ChangeNotifier;
 
-import java.util.ArrayList;
+import java.io.Serializable;
+
+import com.google.gwt.user.client.rpc.GwtTransient;
 
 
 
-public class Robot implements WorldObject {
+public class Robot implements WorldObject, Serializable {
 
+	private static final long serialVersionUID = 1L;
 	static final String LEFT_UP = "LU";
 	static final String RIGHT_UP = "RU";
 	static final String LEFT_DOWN = "LD";
 	static final String RIGHT_DOWN = "RD";
 	private static final int STEP = 5;	
-	private int left;
-	private int top;
+	private int left=0;
+	private int top=0;
 	public String heading = LEFT_DOWN;
-	private ArrayList<ChangeListener> _listeners = new ArrayList<ChangeListener>();
+	
+	@GwtTransient
+	private ChangeNotifier notifier = new ChangeNotifier();
+	
+	public Robot() {
+	}
 	
 	public Robot(int left, int top) {
 		this.left = left;
@@ -24,7 +33,7 @@ public class Robot implements WorldObject {
 	}
 	
 	public void addListener(ChangeListener listener) {
-		_listeners.add(listener);
+		notifier.add(listener);
 	}
 
 	public void rigth() {
@@ -35,9 +44,7 @@ public class Robot implements WorldObject {
 	}
 
 	private void notifyRobotMove() {
-		for (ChangeListener listener : _listeners) {
-			listener.onChange();			
-		}
+		notifier.notifyChange();
 	}
 	
 	public void left() {

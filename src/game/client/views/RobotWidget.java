@@ -20,8 +20,8 @@ public class RobotWidget implements ChangeListener {
 		this.panel = panel;
 		image = new Image(IMAGE, 0, 0, 86, 126);
 		this.panel.add(image);
-		robot.addListener(this);
 		onChange();
+		robot.addListener(this);
 	}
 
 	/* (non-Javadoc)

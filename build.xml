@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<project basedir="." default="deploy" name="game">
+
+  <target name="deploy">
+                <delete dir="build" failonerror="false" />
+                <mkdir dir="build"/>
+                <zip destfile="build/game.war" basedir="war" />
+                <copy todir="/Users/jbernab/Downloads/jetty-distribution-7.3.0.v20110203/webapps" file="build/game.war"/>
+
+        </target>
+</project>
